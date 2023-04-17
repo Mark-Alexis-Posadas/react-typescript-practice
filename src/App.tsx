@@ -27,7 +27,7 @@ const users = [
 
 const App: React.FC = () => {
   return (
-    <div>
+    <>
       {/* <TextField
         text="Mark Alexis Posdas"
         i={3}
@@ -37,7 +37,7 @@ const App: React.FC = () => {
         }}
       /> */}
       <UserTable users={users} />
-    </div>
+    </>
   );
 };
 

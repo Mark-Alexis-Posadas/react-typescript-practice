@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "react-bootstrap/Table";
 
 interface User {
   id: number;
@@ -13,7 +14,7 @@ interface Props {
 
 const UserTable: React.FC<Props> = ({ users }) => {
   return (
-    <table>
+    <Table striped bordered hover size="sm">
       <thead>
         <tr>
           <th>ID</th>
@@ -29,12 +30,16 @@ const UserTable: React.FC<Props> = ({ users }) => {
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>
-              <img src={user.avatar} alt={user.name} />
+              <img
+                src={user.avatar}
+                alt={user.name}
+                style={{ width: "2rem" }}
+              />
             </td>
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
